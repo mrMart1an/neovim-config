@@ -32,6 +32,16 @@ vim.keymap.set('n', '<leader>lw', ':set wrap!<CR>', { desc = 'Toggle line wrapin
 -- Format the buffer using the LSP
 vim.keymap.set('n', '<leader>lfb', vim.lsp.buf.format, { desc = 'Format the buffer with the LSP formatter' })
 
+-- Jump to the previous diagnostic and open a float window
+vim.keymap.set('n', '[d', function()
+  vim.diagnostic.jump({ count = -1, float = true })
+end, { desc = 'Go to prev diagnostic (and open float)' })
+
+-- Optional: Do the same for `]d` (next diagnostic)
+vim.keymap.set('n', ']d', function()
+  vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = 'Go to next diagnostic (and open float)' })
+
 -- Fix extremely annoying issue with tab 
 function leave_snippet()
     if

@@ -28,6 +28,7 @@ require('lazy').setup({
 
     require 'plugins.lsp',
     require 'plugins.blink',
+    require 'plugins.scrollbar',
 
     require 'plugins.debug',
 
