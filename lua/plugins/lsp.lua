@@ -235,6 +235,16 @@ return {
                         },
                     },
                 },
+
+                arduino_language_server = {
+                    cmd = {
+                        "arduino-language-server",
+                        "-clangd",      "/usr/bin/clangd",
+                        "-cli",         "/home/mart1an/bin/arduino-cli",
+                        "-cli-config",  "/home/mart1an/.arduino15/arduino-cli.yaml",
+                        "-fqbn",  "arduiono:avr:nano"
+                    }
+                },
             }
 
             -- Ensure the servers and tools above are installed
